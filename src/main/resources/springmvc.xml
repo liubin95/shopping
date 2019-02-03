@@ -10,13 +10,13 @@
      <context:component-scan base-package="com.liubin.controller"></context:component-scan>
      <!-- 视图资源解析器 -->
      <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-        <property name="prefix" value="/WEB-INF/html/"></property>
-        <property name="suffix" value=".html"></property>
+        <property name="prefix" value="/WEB-INF/jsp/"></property>
+        <property name="suffix" value=".jsp"></property>
      </bean>
      <!-- 静态资源访问  -->
      <mvc:annotation-driven></mvc:annotation-driven>
-     <mvc:resources location="/res/" mapping="/res/**"/>
-     <!-- 配置默认首页 -->
+    <mvc:resources location="/res/" mapping="/res/**"/>
+    <!-- 配置默认首页 -->
      <mvc:view-controller path="/" view-name="redirect:/go/index"/>
      <!-- 文件上传 -->
      <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
